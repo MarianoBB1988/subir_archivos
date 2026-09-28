@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Subir archivo</title>
+</head>
+
+<body>
+
+    <h2>Subir un archivo</h2>
+
+    <!--
+        Formulario para enviar el archivo.
+
+        action="guardar.php"
+        Indica que los datos serán enviados al archivo guardar.php.
+
+        method="POST"
+        Indica que vamos a enviar información al servidor.
+
+        enctype="multipart/form-data"
+        Es necesario cuando el formulario contiene archivos.
+    -->
+    <form action="guardar.php" method="POST" enctype="multipart/form-data">
+
+        <!--
+            Permite seleccionar un archivo desde la computadora.
+
+            name="archivo"
+            Es el nombre que utilizaremos posteriormente
+            en PHP para acceder al archivo.
+        -->
+        <input type="file" name="archivo">
+
+        <!-- Botón para enviar el formulario -->
+        <button type="submit">Guardar archivo</button>
+
+    </form>
+
+</body>
+</html>
